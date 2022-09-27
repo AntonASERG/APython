@@ -1,6 +1,6 @@
 # DZ 5 Напишите программу для. проверки истинности утверждения
 #  ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
-
+# 
 # ПРИЗНАЮСЬ решение скачано из сети - сижу пытаюсь понять как такие операции делать в принципе!!!
 
 # ⋁ -  OR, |, ИЛИ, логическое сложение, дизъюнкция,
@@ -41,9 +41,21 @@ else:
     print('Утверждение ложно')
 #######################################################################
 
-
+# 3д и количество координат
 for x in range(2):
         for y in range(2):
             for z in range(2):
                 print(not (x or y or z) == (not x and not y and not z))
                 print(x, y, z)
+########################################################################
+trigger = True # буллева переменная
+
+for x in [True,False]: # for x in range(2):
+        for y in [True,False]:
+            for z in [True,False]:
+                if not (x or y or z) != (not x and not y and not z):
+                    print ('NE VERNO')
+                    trigger = False
+                    break
+if trigger: print ('VERNO')              
+
