@@ -1,0 +1,2 @@
+polynomial in grade 3
+ - 77x^2 + 9x^1 + 72 = 0

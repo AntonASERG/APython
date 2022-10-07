@@ -1,0 +1,2 @@
+polynomial in grade 3
+ - 91x^2 + 12x^1 + 11 = 0
