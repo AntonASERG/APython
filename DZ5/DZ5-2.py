@@ -67,7 +67,7 @@ def stupidBot():
     lot = random.randint (1, 2)
     
    
-    
+    # цикл - первый ходит игрок
     if lot == 1:
         print (f'первым ходит - {player1}')
         while count > 0:
@@ -82,6 +82,8 @@ def stupidBot():
                 winner = player2
             else:
                 winner = player1
+
+# цикл первый ходит ТУПОЙ БОТ  
     if lot == 2:
         print (f'первым ходит - {player2}')
         while count > 0:
@@ -108,41 +110,55 @@ def megaBot():
     
     count = 150
     winner = player1
-
+    i = 29
     #определение кто первый ходит
     import random
     lot = random.randint (1, 2)
     
    
-    
+# цикл - первый ходит игрок
     if lot == 1:
         print (f'первым ходит - {player1}')
+        count = count - int(input(f'Ходит {player1} -  '))
+        print(f'Остаток:  {count}')
+        steep2 = count%i
+        print (f'Ходит {player2} - {steep2}')
+        count = count - steep2
+        print(f'Остаток:  {count}')
         while count > 0:
-            count = count - int(input(f'Ходит {player1} -  '))
+            steep1 = int(input(f'Ходит {player1} -  '))
+            count = count - steep1
             print(f'Остаток:  {count}')
             winner = player1
             if count > 0:
-                steep = random.randint (1, 28)
-                print (f'Ходит {player2} - {steep}')
-                count = count - steep
+                steep3 = i - steep1
+                print (f'Ходит {player2} - {steep3}')
+                count = count - steep3
                 print(f'Остаток:  {count}')
                 winner = player2
             else:
                 winner = player1
+                
+# цикл - первый ходит МЕГАБОТ
     if lot == 2:
         print (f'первым ходит - {player2}')
+        steep2 = count%i
+        print (f'Ходит {player2} - {steep2}')
+        count = count - steep2
+        print(f'Остаток:  {count}')
         while count > 0:
-            steep = random.randint (1, 28)
-            print (f'Ходит {player2} - {steep}')
-            count = count - steep
+            steep1 = int(input(f'Ходит {player1} -  '))
+            count = count - steep1
             print(f'Остаток:  {count}')
-            winner = player2
+            winner = player1
             if count > 0:
-                count = count - int(input(f'Ходит {player1} -  '))
+                steep3 = i - steep1
+                print (f'Ходит {player2} - {steep3}')
+                count = count - steep3
                 print(f'Остаток:  {count}')
-                winner = player1
-            else:
                 winner = player2
+            else:
+                winner = player1
 
     print (f' Победитель: {winner}!')
 # выбор режима игры
