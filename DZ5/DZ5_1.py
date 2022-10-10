@@ -18,7 +18,7 @@ def elemFilter (str):
     for i in range(len(listText)):
         if listText[i].find(strElem) == -1:
             listCut.append(listText[i])
-    strCut = ' '.join(listCut)
+    strCut = ' '.join(listCut) # перевести массив в строку с разд. пробел
     return strCut
 
 print(elemFilter(strText))
