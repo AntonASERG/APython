@@ -12,7 +12,7 @@ except:
 
 print (file)
 listInt = []
-ы
+
 for elem in file: 
      i = 0
      while elem[0+i].isdigit():# пока  позиция в элементе цифра?
