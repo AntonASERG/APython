@@ -44,3 +44,13 @@ nok = (nokAB(factA,factB))
 print (factA)
 print (factB)
 print (nok)
+
+# Метод принимает 2 числа ИНТ и выдает int НОК
+def nokAbsimple (a,b):
+    i = 1
+    while (min(a,b)*i)%max(a,b) != 0:
+        i+=1
+    nok = min(a,b)*i
+    return nok
+
+print (f'вариант2 - {nokAbsimple (a,b)}')
